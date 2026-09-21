@@ -59,6 +59,7 @@
     color:var(--text);
     font-family:-apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing:antialiased;
+    font-size:15px;
   }
   h1,h2,h3{ font-weight:700; letter-spacing:-0.02em; text-wrap:balance; margin:0; }
   .mono{ font-family:'JetBrains Mono', ui-monospace, monospace; font-variant-numeric:tabular-nums; }
@@ -657,6 +658,57 @@
   .foot-inner p{ font-size:12.5px; color:var(--text-faint); max-width:60ch; line-height:1.6; margin:0; }
   .foot-links{ display:flex; gap:16px; font-size:13px; }
   .foot-links a{ text-decoration:none; color:var(--text-dim); }
+
+  /* ---------- mobile app shell ---------- */
+  .mobile-tabbar{ display:none; }
+  @media (max-width:760px){
+    body{ font-size:17px; }
+    .wrap{ padding-inline:14px; }
+    .nav-inner{ padding:12px 14px; }
+    .stepper-wrap{ display:none; }
+    #courseWrap{ padding-bottom:calc(84px + env(safe-area-inset-bottom,0px)); }
+
+    .lesson-card{ padding:20px; }
+    .subhead{ font-size:20px; margin-top:34px; }
+    .hero h1{ font-size:clamp(32px,9vw,44px); }
+    .hero p.lede{ font-size:17.5px; }
+    .lesson-card > p.intro{ font-size:17.5px; line-height:1.65; }
+    .subhead-note{ font-size:16px; }
+    .term p, .layer p, .simple-card p, .notice p, .tranche .row, .bond-list li, .gov-body p,
+    .product-card p, .pc-block p, .reality-explain, .lc-lead, .try-steps li, .mock-overlay p,
+    .foot-inner p{ font-size:16px; }
+    .term .tt{ font-size:15.5px; }
+    .quiz-q{ font-size:20px; }
+    .risk p{ font-size:15px; }
+    .lesson-eyebrow{ font-size:13.5px; }
+    .spec-flag{ font-size:13px; }
+
+    /* ---- bottom tab bar, styled as a progress path ---- */
+    .mobile-tabbar{
+      display:flex; align-items:flex-start; position:fixed; left:0; right:0; bottom:0; z-index:50;
+      background:var(--surface);
+      border-top:1px solid var(--border);
+      border-radius:20px 20px 0 0;
+      padding:14px 10px calc(10px + env(safe-area-inset-bottom,0px));
+      box-shadow:0 -10px 30px -12px rgba(0,0,0,0.28);
+    }
+    .mobile-tabbar .tab-step{
+      flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;
+      padding:2px 2px; border-radius:14px; position:relative;
+    }
+    .mobile-tabbar .step-line{ top:18px; height:3px; border-radius:2px; }
+    .mobile-tabbar .tab-step .step-dot{
+      width:36px; height:36px; font-size:14px; border-width:2.5px;
+      box-shadow:0 2px 6px -2px rgba(0,0,0,0.15);
+    }
+    .mobile-tabbar .tab-step.active .step-dot{
+      background:var(--blue); border-color:var(--blue); color:var(--blue-ink);
+      box-shadow:0 0 0 5px color-mix(in srgb, var(--blue) 16%, transparent);
+    }
+    .mobile-tabbar .tab-step .step-dot svg{ width:16px; height:16px; }
+    .mobile-tabbar .tab-step .step-lbl{ margin-top:0; font-size:11px; font-weight:700; max-width:none; }
+    .mobile-tabbar .tab-step.active .step-lbl{ color:var(--blue); }
+  }
 </style>
 
 <nav class="nav">
@@ -694,6 +746,13 @@
     <button class="step" data-i="3"><span class="step-line"></span><span class="step-dot">4</span><span class="step-lbl">Governance</span></button>
   </div>
 </div>
+
+<nav class="mobile-tabbar" id="tabbar" aria-label="Lessons">
+  <button class="step tab-step" data-i="0"><span class="step-line"></span><span class="step-dot">1</span><span class="step-lbl">Noor</span></button>
+  <button class="step tab-step" data-i="1"><span class="step-line"></span><span class="step-dot">2</span><span class="step-lbl">Node</span></button>
+  <button class="step tab-step" data-i="2"><span class="step-line"></span><span class="step-dot">3</span><span class="step-lbl">Tokens</span></button>
+  <button class="step tab-step" data-i="3"><span class="step-line"></span><span class="step-dot">4</span><span class="step-lbl">Gov</span></button>
+</nav>
 
 <main class="wrap">
 
@@ -1749,6 +1808,13 @@
     var btn = e.target.closest('.step'); if (!btn || btn.disabled) return;
     showLesson(parseInt(btn.dataset.i, 10));
   });
+  var tabbarEl = document.getElementById('tabbar');
+  if (tabbarEl){
+    tabbarEl.addEventListener('click', function(e){
+      var btn = e.target.closest('.step'); if (!btn || btn.disabled) return;
+      showLesson(parseInt(btn.dataset.i, 10));
+    });
+  }
   document.getElementById('restartCourse').addEventListener('click', function(){
     passed = [false,false,false,false];
     saveProgress();
