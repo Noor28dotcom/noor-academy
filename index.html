@@ -1208,12 +1208,12 @@
               <div class="field-lbl">Network year<b class="mono" id="lblYear">Year 1</b></div>
               <input type="range" id="inYear" min="1" max="16" value="1" />
             </div>
-            <div class="control-block" style="display:none">
+            <div class="control-block">
               <div class="field-lbl">Illustrative NOOR price<b class="mono" id="lblPrice">$0.082</b></div>
-              <input type="range" id="inPrice" min="1" max="128" value="8.2" step="0.1" />
+              <input type="range" id="inPrice" min="1" max="82" value="8.2" step="0.1" />
               <div class="price-bar">
                 <div class="price-bar-track"><div class="price-bar-marker" id="priceMarker"></div></div>
-                <div class="price-bar-labels"><span>$0.01</span><span class="now" id="priceBarNow">$0.082</span><span>$1.28</span></div>
+                <div class="price-bar-labels"><span>$0.01</span><span class="now" id="priceBarNow">$0.082</span><span>$0.82</span></div>
               </div>
               <div class="calc-note">Default is the whitepaper's $0.082 reference price. Not a forecast, just drag to see how the USD conversion scales.</div>
             </div>
@@ -1232,7 +1232,7 @@
               <div class="tile hi">
                 <div class="l">Estimated NOOR, selected timeframe</div>
                 <div class="v mono" id="outNoor">0</div>
-                <div class="s" style="display:none">Illustrative NOOR value: <span id="outUsd" class="mono">$0</span></div>
+                <div class="s">Illustrative NOOR value: <span id="outUsd" class="mono">$0</span></div>
               </div>
               <div class="tile">
                 <div class="l">Network daily pool</div>
@@ -1634,7 +1634,7 @@
     document.getElementById('lblActive').textContent = fmt(active);
     document.getElementById('lblYear').textContent = 'Year ' + year;
     document.getElementById('lblPrice').textContent = '$' + fmt(price, 3);
-    var pricePct = ((parseFloat(inPrice.value) - 1) / (128 - 1)) * 100;
+    var pricePct = ((parseFloat(inPrice.value) - 1) / (82 - 1)) * 100;
     document.getElementById('priceMarker').style.left = pricePct + '%';
     document.getElementById('priceBarNow').textContent = '$' + fmt(price, 3);
     document.getElementById('outNoor').textContent = fmt(estNoor, estNoor < 10 ? 2 : 0) + ' NOOR';
