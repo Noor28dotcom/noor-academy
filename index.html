@@ -853,7 +853,7 @@
       <div class="lesson-eyebrow">Lesson 1 of 7</div>
       <span class="spec-flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Speculative, not a promise of profit</span>
       <h2>What is Noor?</h2>
-      <p class="intro">Noor Secure has one job: tell you, in real time, whether a website or a crypto transaction is safe. It runs on Base and Ethereum, and no single company controls the answer, it's decided by a network of independent participants instead.</p>
+      <p class="intro">Noor Secure has one job: tell you, in real time, whether a website or a crypto transaction is safe. It runs on Base, an Ethereum Layer 2, and no single company controls the answer, it's decided by a network of independent participants instead.</p>
       <p class="intro">Right now, that safety call is made by whoever runs the site, the browser, or the wallet you're using, and you just have to trust them. Noor replaces that with three layers working together, each one double‑checking the others.</p>
 
       <div class="layers">
@@ -889,7 +889,7 @@
         <div class="roadmap-strip" id="roadmapStrip">
           <span class="live"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div class="roadmap-lbl">Product 01 is live. 27 more on the roadmap.</div>
+        <div class="roadmap-lbl">Product 01 comes first. 27 more on the roadmap.</div>
 
         <div class="product-cards">
           <div class="product-card">
@@ -1040,7 +1040,7 @@
       <div class="lesson-eyebrow">Lesson 2 of 7</div>
       <span class="spec-flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Speculative, not a promise of profit</span>
       <h2>What is a Node?</h2>
-      <p class="intro">A Verifier Node is a piece of software, run by an independent operator, that performs its own checks on websites and transactions and signs Verification Marks. To run one, an operator holds a <strong>Verifier Node Licence</strong>, an on‑chain ERC‑721 credential capped at 22,996 across the whole network. It's a right to do work, not a claim on anything.</p>
+      <p class="intro">A Verifier Node is a piece of software, run by an independent operator, that performs its own checks on websites and transactions and signs Verification Marks. To run one, an operator holds a <strong>Verifier Node Licence</strong>, an on‑chain ERC‑721 credential capped at 22,996 across the whole network. It's a right to do work, not a claim on anything. Licences are offered only in permitted jurisdictions, subject to identity verification.</p>
 
       <div class="subhead"><span class="sh-n">A</span> Getting a Licence</div>
       <p class="subhead-note">19,196 of the 22,996 total Licences are sold publicly across two ascending‑price tranches. Price rises $128 for every 820 Licences sold within a tranche.</p>
@@ -1083,7 +1083,7 @@
       <div class="mech-grid">
         <div class="timeline">
           <h4 style="margin:0 0 6px;font-size:15px;">Reward release schedule</h4>
-          <p style="margin:0;font-size:13px;color:var(--text-dim);">Each epoch's award locks for six months, then up to 10% of that epoch's accumulated award can be released per month.</p>
+          <p style="margin:0;font-size:13px;color:var(--text-dim);">Each epoch's award locks for six months, then up to 10% of that epoch's original award can be released per month.</p>
           <div class="tl-track"><div class="tl-lock"></div><div class="tl-release"></div></div>
           <div class="tl-labels"><span>Epoch ends &middot; 6‑month lock</span><span>Up to 10% / month after</span></div>
         </div>
@@ -1154,7 +1154,7 @@
                 <div class="flow-node flow-treasury" style="text-align:left;">
                   <div class="l">Foundation Treasury</div>
                   <div class="v mono" id="entTreasuryUsd">$450,000</div>
-                  <div class="s" style="font-size:11.5px;color:var(--text-faint);margin-top:2px;">Grants require full governance approval</div>
+                  <div class="s" style="font-size:11.5px;color:var(--text-faint);margin-top:2px;">Treasury grants go through governance</div>
                 </div>
               </div>
             </div>
@@ -1186,7 +1186,7 @@
               <div class="field-lbl">Network year<b class="mono" id="lblYear">Year 1</b></div>
               <input type="range" id="inYear" min="1" max="16" value="1" />
             </div>
-            <div class="control-block">
+            <div class="control-block" style="display:none">
               <div class="field-lbl">Illustrative NOOR price<b class="mono" id="lblPrice">$0.082</b></div>
               <input type="range" id="inPrice" min="1" max="100" value="8.2" step="0.1" />
               <div class="calc-note">Whitepaper reference price. Not a forecast, just drag to see how the USD conversion scales.</div>
@@ -1206,7 +1206,7 @@
               <div class="tile hi">
                 <div class="l">Estimated NOOR, selected timeframe</div>
                 <div class="v mono" id="outNoor">0</div>
-                <div class="s">Illustrative NOOR value: <span id="outUsd" class="mono">$0</span></div>
+                <div class="s" style="display:none">Illustrative NOOR value: <span id="outUsd" class="mono">$0</span></div>
               </div>
               <div class="tile">
                 <div class="l">Network daily pool</div>
@@ -1244,7 +1244,7 @@
       <div class="lesson-eyebrow">Lesson 4 of 7</div>
       <span class="spec-flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Speculative, not a promise of profit</span>
       <h2>Governance.</h2>
-      <p class="intro">Any change to how Noor works, from adjusting a published token setting to spending treasury funds, has to go through four steps and two separate votes before it happens. <strong>Step 1:</strong> every NOOR holder gets to vote. <strong>Step 2:</strong> only if that vote passes, the node operators vote again to confirm it. Drag the controls below to walk a sample proposal through the process.</p>
+      <p class="intro">Any change to how Noor works, from adjusting a published token setting to spending treasury funds, has to go through four steps and two separate votes before it happens. <strong>Step 1:</strong> every NOOR holder gets to vote. <strong>Step 2:</strong> only if that vote passes, the node operators vote again to confirm it. Early on, most NOOR sits in Foundation-controlled pools, so governance starts out Foundation-directed and decentralises as rewards reach operators. Drag the controls below to walk a sample proposal through the process.</p>
 
       <div class="calc-grid" style="grid-template-columns:1fr 1.15fr;gap:24px;margin-top:24px;">
         <div class="control-block" style="align-self:start;">
@@ -1253,7 +1253,7 @@
             <button data-pass="1" class="active">Passes</button>
             <button data-pass="0">Fails</button>
           </div>
-          <div class="calc-note" style="margin-top:8px;">Every NOOR holder can vote, on‑chain, 1 NOOR = 1 vote. Each dot below stands for a slice of the community.</div>
+          <div class="calc-note" style="margin-top:8px;">Every NOOR holder can vote in an off‑chain signalling poll, 1 NOOR = 1 vote. Each dot below stands for a slice of the community.</div>
           <div class="vote-dots" id="voteDots"></div>
           <div style="height:1px;background:var(--border);margin:16px 0;"></div>
           <div class="field-lbl"><span class="stage-tag">Stage 2</span>Node operator turnout<b class="mono" id="lblTurnout">35%</b></div>
@@ -1269,7 +1269,7 @@
         </div>
 
         <div class="gov-stepper" id="govStepper">
-          <div class="gov-stage" id="gs1"><div class="gov-num">1</div><div class="gov-body"><h4><span class="stage-tag">Stage 1</span>Signalling <span class="gov-badge pending" id="badge1">Pending</span></h4><p>Proposal is put to an on‑chain vote open to every NOOR holder, 1 NOOR = 1 vote.</p></div></div>
+          <div class="gov-stage" id="gs1"><div class="gov-num">1</div><div class="gov-body"><h4><span class="stage-tag">Stage 1</span>Signalling <span class="gov-badge pending" id="badge1">Pending</span></h4><p>Proposal is put to an off‑chain signalling vote open to every NOOR holder, 1 NOOR = 1 vote.</p></div></div>
           <div class="gov-stage" id="gs2"><div class="gov-num">2</div><div class="gov-body"><h4><span class="stage-tag">Stage 2</span>Node operator ratification <span class="gov-badge pending" id="badge2">Pending</span></h4><p id="gs2text">Weighted one vote per operating node. Needs 28% of active operators.</p></div></div>
           <div class="gov-stage" id="gs3"><div class="gov-num">3</div><div class="gov-body"><h4>Execution <span class="gov-badge pending" id="badge3">Pending</span></h4><p>A multi‑signature Safe, controlled by independent directors, executes the passed proposal.</p></div></div>
           <div class="gov-stage" id="gs4"><div class="gov-num">4</div><div class="gov-body"><h4>Timelock <span class="gov-badge pending" id="badge4">Pending</span></h4><p>Major changes pass through a public delay before taking effect.</p></div></div>
@@ -1346,9 +1346,9 @@
     <div class="lesson-card">
       <div class="lesson-eyebrow">Lesson 6 of 7</div>
       <span class="spec-flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Speculative, not a promise of profit</span>
-      <h2>Base vs. Ethereum: why Noor uses both.</h2>
+      <h2>Base vs. Ethereum: how they fit together.</h2>
       <p class="intro">Think of Ethereum as the foundation: a network that secures itself directly, with no other chain behind it. Base is built on top of that foundation by Coinbase. It bundles up thousands of transactions and regularly checks them in with Ethereum, which is how it inherits Ethereum's security while charging a fraction of the cost per transaction.</p>
-      <p class="intro">Noor Secure does its everyday work, like recording verification checks, on Base, because fees there stay low enough to check things constantly. It's also available on Ethereum itself, which has deeper markets and works with the widest range of wallets and exchanges. It's the same NOOR token either way, just usable on two different networks.</p>
+      <p class="intro">Noor Secure does its everyday work, like recording verification checks, on Base, because fees there stay low enough to check things constantly. Because Base settles back to Ethereum, Noor inherits Ethereum's security and sits right next to its deep liquidity and wide wallet support, without running a chain or a bridge of its own. NOOR and the Verifier Node Licences are issued on Base.</p>
 
       <div class="glossary">
         <div class="term"><div class="tt">Layer 1 (L1)</div><p>The main blockchain, Ethereum. It's the foundation everything else is built on and secures itself.</p></div>
@@ -1368,7 +1368,7 @@
       <div class="card-row">
         <div class="simple-card"><h4>Why Base</h4><p>Low fees make frequent, everyday activity practical, exactly what continuous verification needs.</p></div>
         <div class="simple-card"><h4>Why Ethereum</h4><p>The deepest liquidity, the widest wallet and institutional support, and the network Base itself settles back to.</p></div>
-        <div class="simple-card"><h4>Bridging between them</h4><p>Use the official bridge only (e.g. bridge.base.org). It takes real time and a real fee, never an instant "double your tokens" offer.</p></div>
+        <div class="simple-card"><h4>Bridging between them</h4><p>Only use bridges listed on Base's official bridge page (bridge.base.org). It takes real time and a real fee, never an instant "double your tokens" offer.</p></div>
       </div>
 
       <div class="quiz-divider"><span>Lesson check</span></div>
@@ -2052,7 +2052,7 @@
     ],
     [ // Lesson 1: What is a Node
       { q:"How many Verifier Node Licences exist at full network capacity?", opts:["10,000","22,996","50,000","1,000,000"], correct:1, explain:"22,996 total: 1,000 direct, 2,800 promotional/partner, and 19,196 sold publicly." },
-      { q:"How long is each epoch's reward locked before any release begins?", opts:["No lock at all","1 month","6 months","2 years"], correct:2, explain:"A 6-month lock from epoch end, then up to 10% of that epoch's accumulated award releases per month." },
+      { q:"How long is each epoch's reward locked before any release begins?", opts:["No lock at all","1 month","6 months","2 years"], correct:2, explain:"A 6-month lock from epoch end, then up to 10% of that epoch's original award releases per month." },
       { q:"Does holding a Verifier Node Licence alone earn NOOR?", opts:["Yes, automatically, just for holding it","No, NOOR is earned only through verified work","Yes, but only after one year","Only if you also stake ETH"], correct:1, explain:"A Licence is an operator credential, not a yield-bearing asset. Rewards are earned only for active, verified work." }
     ],
     [ // Lesson 2: Tokenomics
@@ -2061,7 +2061,7 @@
       { q:"Over how many years does the Verifier Rewards Pool release?", opts:["4 years","8 years","16 years","No fixed schedule"], correct:2, explain:"530,000,000 NOOR releases over 16 years across four halving periods." }
     ],
     [ // Lesson 3: Governance
-      { q:"In Noor's governance process, who votes first?", opts:["Node operators only","All NOOR holders, in an on-chain signalling vote","The Foundation's directors","Enterprises paying onboarding fees"], correct:1, explain:"Stage 1 is signalling: every NOOR holder can vote on-chain, 1 NOOR = 1 vote. Only if that passes does it move to Stage 2, a vote among node operators." },
+      { q:"In Noor's governance process, who votes first?", opts:["Node operators only","All NOOR holders, in an off-chain signalling vote","The Foundation's directors","Enterprises paying onboarding fees"], correct:1, explain:"Stage 1 is signalling: every NOOR holder can vote in an off-chain signalling poll, 1 NOOR = 1 vote. Only if that passes does it move to Stage 2, a vote among node operators." },
       { q:"What quorum of active node operators is required for ratification?", opts:["10%","28%","51%","75%"], correct:1, explain:"At least 28% of active operators must participate, one vote per node, capped at 280 per holder, or the proposal fails at that stage." },
       { q:"What actually executes a passed proposal?", opts:["Whichever holder proposed it","A multi-signature Safe controlled by independent directors","An automatic smart-contract trigger with no human step","The largest single token holder"], correct:1, explain:"Execution runs through a multi-sig Safe with hardware-wallet custody, controlled by independent directors. Then a public timelock before it takes effect." },
       { q:"Which of these is fixed and cannot be changed by any governance vote?", opts:["Total supply and the emissions schedule","The consumer buy-and-burn share","The AI/attestation weighting","The operator bond range"], correct:0, explain:"Total supply, the emissions schedule, and both burn shares are hard-coded outside governance. No vote changes them." },
@@ -2076,7 +2076,7 @@
     ],
     [ // Lesson 5: Base vs Ethereum
       { q:"What is Base?", opts:["A separate blockchain unrelated to Ethereum","An Ethereum Layer‑2 that inherits Ethereum's security with lower fees","A centralised exchange","A hardware wallet brand"], correct:1, explain:"Base is a Layer 2 built on Ethereum's Optimism stack: it batches transactions and settles back to Ethereum, keeping Ethereum's security at a lower cost." },
-      { q:"Why does Noor Secure make sense on both Base and Ethereum?", opts:["Base is only for testing, Ethereum is the real network","Base keeps everyday activity cheap; Ethereum offers deeper liquidity and reach", "They're identical, it doesn't matter which one you use","Ethereum is being shut down in favour of Base"], correct:1, explain:"Base's low fees suit frequent, continuous activity, while Ethereum offers the widest liquidity and support, so being on both extends reach without giving up either." },
+      { q:"Why does Noor Secure build on Base, an Ethereum Layer 2?", opts:["Base is only for testing, Ethereum is the real network","Low fees for constant checks, with security inherited from Ethereum", "They're identical, it doesn't matter which one you use","Ethereum is being shut down in favour of Base"], correct:1, explain:"Base's low fees suit frequent, continuous verification, and because it settles to Ethereum, Noor inherits Ethereum's security without running its own chain or bridge." },
       { q:"What does \"bridging\" mean?", opts:["Swapping two different tokens on the same chain","Moving an asset from one chain to another through a bridge contract","Adding a new network to your wallet","Staking tokens to earn rewards"], correct:1, explain:"Bridging moves an asset, e.g. from Ethereum to Base, through a bridge contract. It takes real time and a real fee, it isn't instant." }
     ],
     [ // Lesson 6: Avoiding Drainers
